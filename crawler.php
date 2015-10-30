@@ -9,7 +9,7 @@ $client = new Client();
 $urls = ['http://www.eboshi.co.jp/gelande-guide/todays-eboshi'];
 $filters = ['table#wp-table-reloaded-id-21-no-1 td'];
 for( $i = 0; $i < count($urls); $i++) {
-        $crawler = $client->request('GET', $i);
+        $crawler = $client->request('GET', $urls[i]);
         if($crawler) {
                 print $filters[$i] . "<br />";
                 $crawler->filter('table#wp-table-reloaded-id-21-no-1 td')->each(function($node){
